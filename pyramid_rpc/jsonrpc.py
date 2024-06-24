@@ -193,6 +193,8 @@ def parse_request_POST(request):
         batched = body[:]
     except TypeError:
         batched = None
+    except KeyError:
+        batched = None
 
     if batched is not None:
         request.batched_rpc_requests = batched

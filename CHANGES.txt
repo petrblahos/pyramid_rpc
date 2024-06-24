@@ -1,3 +1,9 @@
+- JSON-RPC
+
+  + Python 3.12 compatibility: Detection of a batched request used catching
+    for TypeError prior to Python 3.12. Since Python 3.12, KeyError is raised
+    on a bad slice index. This has been fixed to catch both exceptions.
+
 0.8 (2016-10-31)
 ================
 
